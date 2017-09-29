@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 // set the static files location 
 app.use(express.static(__dirname + '/public'));
-
+app.use(morgan('dev'))
 app.use('/api', require('./api'))
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
